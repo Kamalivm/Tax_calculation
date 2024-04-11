@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <form action="/action_page.php" class="form">
+        <div class="container">
+            <label for="annual_income">Enter gross annual income <img src="./image/question.png" title="Gross annual income is your total salary in a year before any deductions"></label>
+            <input class="field" type="number" placeholder="Enter gross annual income" required>
+
+            <label for="extra_income">Enter extra income</label>
+            <input class="field" type="number" placeholder="Enter extra income from other sources" required>
+
+            <label for="age_group">Enter age group</label>
+            <input class="field" type="number">
+
+            <label for="deductions">Enter total applicable deductions</label>
+            <input class="field" type="number" placeholder="Add total applicable deductions" required>
+
+            <button onclick="openPopup()" type="submit" class="submit">Submit</button>
+
+            <div class="popup" id="popup">
+                <h2>Your overall income will be</h2>
+                <h4>12,00,00</h4>
+                <p>after tax deductions</p>
+                <button onclick="closePopup()" type="button">Close</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
