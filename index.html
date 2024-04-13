@@ -11,10 +11,10 @@
     <form class="form" onsubmit="validateForm(); return false;">
         <div class="container">
             <label for="annual_income">Enter gross annual income </label><img src="./image/question.png" title="Gross annual income is your total salary in a year before any deductions">
-            <input id="annual_income" class="field error-icon" type="text" placeholder="Enter gross annual income" data-error="Gross annual income is required">
+            <input id="annual_income" class="field error-icon" type="text" placeholder="Enter gross annual income" data-error="Gross annual income is required" required>
 
             <label for="extra_income">Enter extra income </label><img src="./image/question.png" title="Extra amount of your income from other sources">
-            <input id="extra_income" class="field error-icon" type="text" placeholder="Enter extra income from other sources" data-error="Extra income is required">
+            <input id="extra_income" class="field error-icon" type="text" placeholder="Enter extra income from other sources" data-error="Extra income is required" required>
 
             <label for="age_group">Enter age group </label><img src="./image/question.png" title="Select Valid age">
             <select id="age_group" class="field error-icon">
@@ -25,7 +25,7 @@
             </select>
 
             <label for="deductions">Enter total applicable deductions </label><img src="./image/question.png" title="The Total applicable deductions">
-            <input id="deductions" class="field error-icon" type="text" placeholder="Add total applicable deductions" data-error="Deductions are required">
+            <input id="deductions" class="field error-icon" type="text" placeholder="Add total applicable deductions" data-error="Deductions are required" required>
 
             <button type="submit" class="submit">Submit</button>
 
