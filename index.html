@@ -8,25 +8,30 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <form action="/action_page.php" class="form">
+    <form class="form" onsubmit="validateForm(); return false;">
         <div class="container">
-            <label for="annual_income">Enter gross annual income <img src="./image/question.png" title="Gross annual income is your total salary in a year before any deductions"></label>
-            <input class="field" type="number" placeholder="Enter gross annual income" required>
+            <label for="annual_income">Enter gross annual income </label><img src="./image/question.png" title="Gross annual income is your total salary in a year before any deductions">
+            <input id="annual_income" class="field error-icon" type="text" placeholder="Enter gross annual income" data-error="Gross annual income is required">
 
-            <label for="extra_income">Enter extra income</label>
-            <input class="field" type="number" placeholder="Enter extra income from other sources" required>
+            <label for="extra_income">Enter extra income </label><img src="./image/question.png" title="Extra amount of your income from other sources">
+            <input id="extra_income" class="field error-icon" type="text" placeholder="Enter extra income from other sources" data-error="Extra income is required">
 
-            <label for="age_group">Enter age group</label>
-            <input class="field" type="number">
+            <label for="age_group">Enter age group </label><img src="./image/question.png" title="Select Valid age">
+            <select id="age_group" class="field error-icon">
+                <option value=""></option>
+                <option value="below_40">&lt; 40</option>
+                <option value="40_to_60">&ge; 40 &lt; 60</option>
+                <option value="above_60">&ge; 60</option>
+            </select>
 
-            <label for="deductions">Enter total applicable deductions</label>
-            <input class="field" type="number" placeholder="Add total applicable deductions" required>
+            <label for="deductions">Enter total applicable deductions </label><img src="./image/question.png" title="The Total applicable deductions">
+            <input id="deductions" class="field error-icon" type="text" placeholder="Add total applicable deductions" data-error="Deductions are required">
 
-            <button onclick="openPopup()" type="submit" class="submit">Submit</button>
+            <button type="submit" class="submit">Calculate Tax</button>
 
             <div class="popup" id="popup">
                 <h2>Your overall income will be</h2>
-                <h4>12,00,00</h4>
+                <h4 id="tax_amount">0</h4>
                 <p>after tax deductions</p>
                 <button onclick="closePopup()" type="button">Close</button>
             </div>

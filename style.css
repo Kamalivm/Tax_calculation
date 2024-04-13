@@ -1,29 +1,33 @@
-*{
+* {
     box-sizing: border-box;
 }
-.form{
-    align-items: center;
-    justify-content: center;
+
+.form {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
-label{
+
+label {
     font-weight: bold;
 }
-label img{
+
+img {
     width: 17px;
     cursor: pointer;
-    
 }
-.container{
+
+.container {
     max-width: 500px;
-    padding: 20px;
-    border: 5px solid rgb(198, 186, 186);
+    padding: 40px;
+    border: 2px solid rgb(198, 186, 186);
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0 ,0 ,0 ,0.1) ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.field{
+
+.field {
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
@@ -31,53 +35,56 @@ label img{
     margin-bottom: 15px;
     width: 100%;
 }
-.submit{
-    margin-left: 25px;
+
+.submit {
     background-color: rgb(2, 108, 255);
     border: none;
     padding: 15px;
     border-radius: 5px;
-    width: 400px;
+    width: 420px;
     color: #ffffff;
     cursor: pointer;
     opacity: 0.9;
+    box-shadow: 0px 0px 10px black;
     transition: transform 0.2s;
 }
-.submit:active{
+
+.submit:active {
     transform: scale(0.95);
 }
-.submit:hover{
+
+.submit:hover {
     opacity: 1;
 }
 
-.popup{
+.popup {
     width: 550px;
     height: 300px;
     border: 2px solid #333;
     background-color: #ffffff;
-    -webkit-border-radius: 6px;
-    -moz-border-radius:6px;
     border-radius: 6px;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 60px;
     color: #333;
     visibility: hidden;
 }
-.open-popup{
+
+.popup.open-popup {
     visibility: visible;
-    top: 50%;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
-.popup h2{
+
+.popup h2 {
     font-size: 32px;
     font-weight: 500;
     margin: 30px 0 10px;
 }
-.popup button{
+
+.popup button {
     width: 20%;
     margin-top: 50px;
     padding: 10px 0;
@@ -86,4 +93,54 @@ label img{
     color: #fff;
     border-radius: 3px;
 }
-    
+
+/* Tooltip CSS
+[data-title] img:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px;
+    color: #222;
+    border-radius: 5px;
+    font-size: 12px;
+    background: #282929;
+    visibility: hidden;
+}
+
+[data-title] img:hover::after {
+    visibility: visible;
+}
+
+.error-icon::after {
+    content: "!";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: red;
+    cursor: pointer;
+}
+
+.error-icon:hover::after {
+    content: attr(data-error);
+}
+
+.field {
+    position: relative;
+}
+
+.field.error-icon::after {
+    content: "!";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: red;
+    cursor: pointer;
+}
+
+.field.error-icon:hover::after {
+    content: attr(data-error);
+} */
