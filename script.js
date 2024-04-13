@@ -14,7 +14,6 @@ let popup = document.getElementById('popup');
             const ageGroup = document.getElementById('age_group').value;
             const deductions = parseFloat(document.getElementById('deductions').value);
 
-            // Reset error states
             const fields = ['annual_income', 'extra_income', 'age_group', 'deductions'];
             fields.forEach(fieldId => {
                 const field = document.getElementById(fieldId);
@@ -23,7 +22,6 @@ let popup = document.getElementById('popup');
 
             let isValid = true;
 
-            // Validate inputs
             if (isNaN(annualIncome) || annualIncome <= 0) {
                 document.getElementById('annual_income').setAttribute('data-error', 'Invalid annual income');
                 isValid = false;
@@ -63,8 +61,7 @@ let popup = document.getElementById('popup');
                 }
             }
 
-            // Update the displayed tax amount
             document.getElementById('tax_amount').textContent = taxAmount.toFixed(2);
 
-            openPopup(); // Open the popup to display the result
+            openPopup(); 
         }
